@@ -1,0 +1,73 @@
+/* Just some default styling */
+* {
+    font-family: 'Itim', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration-style: none;
+    background-color: rgb(33, 33, 43);
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(241, 165, 114);
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin-top: 3rem;
+}
+
+/*Here I style the wrapper that wraps around the box*/
+.wrap {
+    background-color:  rgb(29, 29, 37);
+    width: 40rem;
+    height: 40rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/*Here we have the box*/
+.box {
+    position: absolute; 
+    width: 10rem;
+    height: 10rem;
+    background-color: teal;
+    animation-name: box; /*I give the animation a name so I can mention it in the keyframes*/
+    animation-duration: 8s; /*I give the animation a duration*/
+    animation-timing-function: ease-out; /*I give it a timing function of ease-out so it looks "Jumpy" when hitting the corners*/
+}
+
+@keyframes box { /* Here are the keyframes*/
+    
+    0% { /* Here are the animation properties for the beginning of the animation*/
+        background-color: teal;
+        left: 0;
+        top: 0;
+    }
+    
+    25% { /* In between the beginning and ending are some other properties*/
+        background-color: mediumslateblue;
+        left: 0;
+        top: 30rem;
+    }
+    
+    50% { /* Here are properties to turn the box into a circle for a moment*/
+        background-color: rgb(240, 138, 36);
+        left: 30rem;
+        top: 0px;
+        border-radius: 50%;
+    }
+    
+    75% {
+        background-color: rgb(99, 26, 68);
+        left: 30rem;
+        top: 30rem;
+    }
+    
+    100% { /* Here are the animation properties for the ending of the animation*/
+        background-color: rgb(99, 163, 144);
+        left: 0;
+        top: 0;
+    }
+
+
+}   
